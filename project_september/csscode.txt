@@ -1,0 +1,193 @@
+*{
+    font-family: 'roboto', sans-serif;
+}
+
+nav{
+    height: 50px;
+    background-color: #212121;
+}
+
+header{
+    position: relative;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 13px 70px;
+    margin: 0;
+}
+
+.menu_link{
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.li_menu{
+    border-right: 2px dotted black;
+    padding-right: 28px;
+}
+
+.subheader{
+    position: absolute;
+    width: 100%;
+    height: 87px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+
+
+.text_official{
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 6px;
+    opacity: 0.5;
+}
+
+.subheader_logo{
+    display: block;
+    max-width: 100%;
+    margin-top: 16px;
+}
+
+.subheader_call{
+    color: #FFF;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 19px;
+}
+
+.number{
+    color: #FFF;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 8px;
+    line-height: 12px;
+}
+
+.subheader_btn , .btn{
+    margin-top: 19px;
+    width: 172px;
+    height: 46px;
+    border-radius: 4px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.12) inset;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: none;
+}
+
+.logo{
+    min-height: 800px;
+    background: url(../img/bg/uber_bg.png) center center/cover no-repeat;
+    padding: 150px 0 135px 0;
+}
+
+h1{
+    color: #FFF;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.logo_htwo{
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.logo_text{
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    margin-top: 23px;
+}
+
+.logo_btn{
+    display: block;
+    margin: 118px auto 0 auto;
+}
+
+.reason{
+    min-height: 5250px;
+}
+
+.reason_text{
+    width: 113px;
+    height: 24px;
+    color: #FFF;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.eight_text{
+    color: #222;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 33px;
+}
+
+.reason_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.reason_round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    min-width: 113px;
+    height: 113px;
+    background-color:#1EACC7;
+    border-radius:100%;
+}
+
+.reason_descr{
+    color: #202020;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+span{
+    color: #1EACC7;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px; /* 123.529% */
+}

@@ -1,0 +1,44 @@
+.promo
+    min-height: 100vh
+    position: relative
+    background: url('../img/bg/Background.jpg') center center/ cover no-repeat
+    .container
+        padding-top: 205px
+    &__subtitle
+        z-index: 2
+        position: relative
+        @include before_circle
+        font-size: 16px
+        font-weight: 700
+    &__title
+        font-size: 48px
+        font-weight: 700
+        line-height: 60px
+        margin-top: 10px
+    &__buttons
+        margin-top: 25px
+        display: flex
+        width: 250px
+        justify-content: space-between
+        align-items: center
+    &__button
+        font-size: 14px
+        font-weight: 700
+        text-align: center
+        width: 135px
+        height: 45px
+        background: #FFA501
+        border: none
+        cursor: pointer
+        &:hover
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5)
+            transition: all 0.3s ease
+    &__link
+        font-size: 14px
+        font-weight: 700
+        line-height: 45px
+        text-decoration: none
+        color: #000
+        &:hover
+            text-shadow: 2px 2px 4px #000000
+            transition: all 0.3s ease

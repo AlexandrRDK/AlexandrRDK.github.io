@@ -1,0 +1,86 @@
+.resume
+    padding-top: 120px
+    &__title
+        position: relative
+        text-align: center
+        font-size: 16px
+        font-weight: 700
+        @include before_circle
+        &:before
+            top: -6px
+            left: 50%
+            transform: translateX(-50%)
+    &__subtitle
+        text-align: center
+        font-size: 36px
+        font-weight: 700
+        line-height: 60px
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(2, 425px)
+        padding: 60px 65px 0 65px
+        column-gap: 135px
+    &__column
+        &-title
+            position: relative
+            padding-left: 35px
+            font-size: 20px
+            font-weight: 700
+            &:before
+                content: ''
+                position: absolute
+                width: 15px
+                height: 15px
+                border-radius: 100%
+                background: #FFA501
+                left: -7px
+                top: 50%
+                transform: translateY(-50%)
+        ul
+            margin: 0
+            padding: 0
+            list-style-type: none
+            li
+                position: relative
+                &:after
+                    content: ''
+                    width: 1px
+                    height: calc(100% + 16px)
+                    position: absolute
+                    top: -26px
+                    left: 0
+                    background-color: #000
+    &__item
+        position: relative
+        &:before
+            content: ''
+            height: 1px
+            width: 45px
+            position: absolute
+            background-color: #000
+            top: 68px
+        &-head
+            position: relative
+            padding: 45px 0 0 100px
+            h4
+                margin: 0
+                font-size: 14px
+                font-weight: 700
+        &-body
+            padding-left: 43px
+            margin-top: 12px
+            font-size: 12px
+            line-height: 18px
+        &-icon
+            position: absolute
+            top: 50px
+            left: 45px
+            @include before_circle
+            img
+                position: absolute
+                left: 17px
+                top: 14px
+        &-location
+            font-size: 12px
+            line-height: 18px
+            margin-top: 5px
