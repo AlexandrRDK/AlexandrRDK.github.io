@@ -1,0 +1,112 @@
+.promo
+    min-height: 680px
+    background: url('../img/bg/logo_bg.jpg') center center/cover no-repeat
+    &__shell
+        display: flex
+        justify-content: space-between
+    &__logo
+        margin-top: 20px
+    .menu
+        height: 20px
+        margin: 0
+        padding: 0
+        width: 605px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        list-style-type: none
+        margin-top: 55px
+        &__item
+            margin: 0
+            padding: 0
+        &__link
+            position: relative
+            color: #fff
+            text-decoration: none
+            font-size: 15px
+            line-height: 20px
+            transition: all 0.3s ease
+            &:hover
+                color: $main-color
+                &:after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    bottom: -5px
+                    width: 100%
+                    height: 1px
+                    background: $main-color
+    &__phone
+        min-width: 345px
+        margin-top: 45px
+        display: flex
+        justify-content: end
+        &__text
+            color: #fff
+            font-size: 14px
+            line-height: 20px
+        &__number
+            color: #fff
+            text-decoration: none
+            font-size: 19px
+            font-weight: bold
+            line-height: 26px
+        &__wrapper
+            text-align: right
+            margin-right: 15px
+    &__title
+        font-size: 24px
+        line-height: 28px
+        text-align: center
+        color: #fff
+        margin-top: 10px
+    h1
+        margin: 0
+        text-align: center
+        font-size: 72px
+        color: $main-color
+        line-height: 86px
+        margin-top: 5px
+    h2
+        margin: 0
+        text-align: center
+        color: #fff
+        font-size: 42px
+        line-height: 50px
+    &__dividers
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        align-items: center
+        width: 810px
+        height: 25px
+        margin-top: 30px
+    &__divider
+        height: 1px
+        background: #fff
+        width: 100%
+    .circle-margin
+        margin: 0 15px 0 10px
+    &__circle
+        width: 10px
+        height: 10px
+        margin: 0 auto
+        background: #fff
+        border-radius: 100%
+    &__wrapper
+        display: grid
+        grid-template: minmax(170px, auto)/repeat(4, 1fr)
+        justify-content: space-between
+        column-gap: 30px
+        &-element
+            display: grid
+            grid-template: 1fr 1fr/ 1fr
+            justify-content: center
+            align-items: center
+        &-icon
+            margin: 0 auto
+        &-title
+            text-align: center
+            color: #fff
+            font-size: 16px
+            line-height: 22px
