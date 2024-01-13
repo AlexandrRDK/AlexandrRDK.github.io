@@ -1,0 +1,339 @@
+@media (max-width: 1200px)
+    .container
+        width: 1024px
+    .promo
+        .menu
+            width: 560px
+    .carousel
+        &__prev
+            left: 180px
+        &__next
+            right: 180px
+
+@media (max-width: 1024px)
+    .display-none
+        display: none
+    .container
+        width: 768px
+    .promo
+        &__logo
+            img
+                width: 100%
+        .menu
+            width: 415px
+            &__link
+                font-size: 12px
+                line-height: 14px
+        &__phone
+            min-width: auto
+            &__text
+                font-size: 12px
+                line-height: 18px
+            &__number
+                font-size: 18px
+        &__btn
+            display: none
+        h1
+            font-size: 50px
+        h2
+            font-size: 30px
+        &__wrapper
+            &-title
+                font-size: 14px
+                line-height: 20px
+    .our-work
+        &__header
+            font-size: 17px
+            margin-top: 20px
+        &__subheader
+            margin-top: 10px
+            font-size: 16px
+            line-height: 20px
+    .price
+        &__button
+            width: 120px
+        &__item
+            &-main
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+        .consultation
+            &__wrapper
+                padding: 0 75px
+                grid-template: 45px/repeat(3,1fr)
+                input
+                    font-size: 14px
+    .scheme
+        padding: 50px 0
+        &__wrapper-row-2
+            grid-template: 1fr/repeat(3,1fr)
+    .questions
+        &__form
+            padding: 17px 10px 25px 10px
+            &-wrapper
+                grid-template: 1fr/repeat(3,1fr)
+                input
+                    width: 100%
+            textarea
+                width: 100%
+    .footer
+        &__main
+            display: grid
+            grid-template: 1fr / repeat(2, 1fr)
+            &-item
+                img
+                    width: 100%
+            &-part
+                justify-content: space-around
+        &__text
+            margin-left: 10px
+
+
+@media (max-width: 768px)
+    .divider
+        margin-top: 20px
+    .container
+        width: 576px
+    .promo
+        min-height: 480px
+        &__logo
+            display: none
+        .menu
+            width: 350px
+            position: fixed
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            top: 0
+            left: -100%
+            width: 50%
+            height: 100vh
+            background: rgba(0, 0, 0, 0.8)
+            transition: 0.6s all
+            &__active
+                left: 0
+            &__link
+                font-size: 18px
+            &__item
+                padding-right: 0
+                border: none
+                margin: 15px 0
+        &__phone
+            display: none
+        &__title
+            font-size: 20px
+            line-height: 26px
+        h1
+            font-size: 40px
+            line-height: 60px
+        h2
+            font-size: 24px
+            line-height: 40px
+        &__dividers
+            margin-top: auto
+        &__wrapper
+            column-gap: 15px
+            &-title
+                font-size: 12px
+                line-height: 18px
+        .button
+            &-under
+                margin-top: 30px
+                width: 200px
+                height: 50px
+                font-size: 12px
+    .hamburger
+        display: block
+        position: absolute
+        right: 10px
+        top: 10px
+        width: 26px
+        height: 12px
+        span
+            display: block
+            height: 2px
+            width: 100%
+            background: #fff
+            margin-bottom: 2px
+            transition: 0.5s all
+        &__active
+            span
+                margin-bottom: -2px
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px) rotate(45deg)
+    .advantages
+        &__wrapper
+            grid-template: repeat(8,minmax(66px,auto))/repeat(1,1fr)
+            gap: 20px 60px
+        &__descr
+            margin-left: 0
+    .our-work
+        min-height: auto
+        padding: 20px 0
+        &__title
+            font-size: 23px
+        &__subtitle
+            font-size: 18px
+        &__wrapper
+            margin-top: 20px
+        &__descr
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__header
+            font-size: 16px
+            line-height: 20px
+        &__subheader
+            font-size: 14px
+            line-height: 18px
+            min-height: 200px
+
+    .price
+        padding-top: 20px
+        &__wrapper
+            grid-template: 2fr/repeat(2,1fr)
+            gap: 20px
+        &__button
+            width: 160px
+        .consultation
+            &__form
+                height: 260px
+            &__img
+                top: -15%
+            &__wrapper
+                grid-template: repeat(3,45px)/1fr
+                row-gap: 10px
+
+    .manager
+        padding-top: 20px
+        &__wrapper
+            padding: 0
+        &__subheader
+            margin-top: 15px
+
+    .scheme
+        &__title
+            font-size: 23px
+        &__wrapper
+            grid-template: 4fr/repeat(2,1fr)
+            gap: 20px
+        &__wrapper-row-2
+            margin-top: 20px
+            grid-template: 2fr/repeat(2,1fr)
+            gap: 20px
+
+    .reviews
+        padding-top: 20px
+        &__title
+            font-size: 23px
+        &__subtitle
+            font-size: 16px
+    .carousel
+        display: none
+    .questions
+        &__form
+            &-wrapper
+                grid-template: repeat(3,1fr)/1fr
+                gap: 10px
+            textarea
+                margin-top: 10px
+    .footer
+        &__text
+            font-size: 14px
+        &__subtitle
+            font-size: 16px
+        .button
+            font-size: 10px
+            width: 120px
+            height: 40px
+
+@media (max-width: 576px)
+    .container
+        width: 300px
+    .promo
+        &__shell
+            padding-top: 30px
+        &__title
+            margin-top: 0
+        h1
+            font-size: 30px
+            line-height: 36px
+        h2
+            font-size: 20px
+            line-height: 26px
+        &__wrapper
+            grid-template: repeat(2,1fr)/repeat(2,1fr)
+        .button
+            &-under
+                margin-top: 20px
+                width: 180px
+                height: 45px
+                font-size: 12px
+    .advantages
+        padding: 20px 0
+        &__title
+            font-size: 23px
+        &__wrapper
+            margin-top: 20px
+        &__item
+            flex-direction: column
+        &__descr
+            width: 100%
+        &__header
+            text-align: center
+            font-size: 14px
+        &__subheader
+            font-size: 14px
+            line-height: 18px
+            text-align: center
+            margin-top: 10px
+    .our-work
+        &__wrapper
+            grid-template: repeat(3,1fr)/1fr
+            row-gap: 20px
+        &__descr
+            justify-content: start
+        &__header
+            margin-top: 15px
+        &__subheader
+            min-height: auto
+    .agent
+        padding: 30px 0
+        &__header
+            margin-top: 20px
+            font-size: 23px
+        &__subheader
+            margin-top: 15px
+            font-size: 16px
+            line-height: 24px
+    .price
+        &__title
+            font-size: 23px
+        &__subtitle
+            font-size: 16px
+        &__wrapper
+            grid-template: 4fr/1fr
+            gap: 20px
+        .consultation
+            &__wrapper
+                padding: 0 35px
+    .manager
+        &__header
+            font-size: 23px
+        &__subheader
+            font-size: 16px
+    .scheme
+        &__wrapper
+            grid-template: 4fr/1fr
+            gap: 20px
+        &__wrapper-row-2
+            margin-top: 20px
+            grid-template: 3fr/1fr
+            gap: 20px
+    .footer
+        &__main, &__submain
+            grid-template: repeat(2, 1fr) / 1fr
