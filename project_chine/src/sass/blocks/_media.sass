@@ -233,7 +233,11 @@
         &__subtitle
             font-size: 16px
     .carousel
-        display: none
+        &__prev
+            top: 50px
+        &__next
+            top: 50px
+            right: 150px
     .questions
         &__form
             &-wrapper
@@ -335,6 +339,15 @@
             margin-top: 20px
             grid-template: 3fr/1fr
             gap: 20px
+    .carousel
+        &__wrapper
+            width: auto
+        &__prev
+            top: 50px
+            left: 50px
+        &__next
+            top: 50px
+            right: 60px
     .footer
         &__main, &__submain
             grid-template: repeat(2, 1fr) / 1fr

@@ -1,72 +1,22 @@
-
-//слайдер
-
-$('.single-item').slick({
-  centerMode: true,
-  centerPadding: '0px',
-  slidesToShow: 1,
-  infinite: true,
-  adaptiveHeight: true,
-  prevArrow: '<img src="img/reviews/Previous.png" class="carousel__prev" alt="prev">',
-  nextArrow: '<img src="img/reviews/Next.png" class="carousel__next" alt="next">',
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
-  ]
-});
-
-
-//плавный скролл
-
-
-document.querySelectorAll('.smooth-scroll').forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    const targetId = this.getAttribute('href');
-    const targetPosition = document.querySelector(targetId).offsetTop;
-
-    window.scroll({
-      top: targetPosition,
-      left: 0,
-      behavior: 'smooth'
-    });
-  });
-});
-
-
-//hamburger
+import hamburger from './modules/hamburger';
+import smoothScroll from './modules/smooth-scroll';
+import carousel from './modules/carousel';
+import modal from './modules/modal';
+import sendForm from './modules/sendForm';
 
 window.addEventListener('DOMContentLoaded', () => {
-  const menu = document.querySelector('.menu'),
-  menuItem = document.querySelectorAll('.menu__item'),
-  hamburger = document.querySelector('.hamburger');
 
-  hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('hamburger__active');
-      menu.classList.toggle('menu__active');
-  });
 
-  menuItem.forEach(item => {
-      item.addEventListener('click', () => {
-          hamburger.classList.toggle('hamburger__active');
-          menu.classList.toggle('menu__active');
-      })
-  })
+  hamburger();
+  smoothScroll();
+  carousel({
+    slide: '.carousel__item',
+    nextArrow: '.carousel__next',
+    prevArrow: '.carousel__prev',
+    wrapper: '.carousel',
+    field: '.carousel-inner'
+});
+  sendForm('form');
+  modal('.modal');
 })
 
