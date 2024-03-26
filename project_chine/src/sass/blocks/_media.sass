@@ -9,6 +9,11 @@
             left: 180px
         &__next
             right: 180px
+    .reviews
+        .slick-prev
+            left: 42%
+        .slick-next
+            right: 42%
 
 @media (max-width: 1024px)
     .display-none
@@ -67,6 +72,14 @@
         padding: 50px 0
         &__wrapper-row-2
             grid-template: 1fr/repeat(3,1fr)
+    .reviews
+        .slick-prev
+            left: 40%
+        .slick-next
+            right: 40%
+        .slider__subheader
+            font-size: 14px
+            padding: 0
     .questions
         &__form
             padding: 17px 10px 25px 10px
@@ -232,6 +245,12 @@
             font-size: 23px
         &__subtitle
             font-size: 16px
+        .slick-prev
+            left: 38%
+        .slick-next
+            right: 38%
+        .slider__subheader
+            font-size: 12px
     .carousel
         &__prev
             top: 50px
@@ -339,15 +358,9 @@
             margin-top: 20px
             grid-template: 3fr/1fr
             gap: 20px
-    .carousel
-        &__wrapper
-            width: auto
-        &__prev
-            top: 50px
-            left: 50px
-        &__next
-            top: 50px
-            right: 60px
+    .reviews
+        .slider__subheader
+            font-size: 10px
     .footer
         &__main, &__submain
             grid-template: repeat(2, 1fr) / 1fr

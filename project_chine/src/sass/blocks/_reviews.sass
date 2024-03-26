@@ -10,3 +10,45 @@
         font-size: 21px
         line-height: 24px
         text-align: center
+    &__wrapper
+        min-height: 400px
+        padding-top: 35px
+        width: 100%
+        overflow: hidden
+    .slick-track
+        display: flex
+    .slider
+        position: relative
+    .slider__item
+        opacity: 0.4
+        text-align: center
+        transform: scale(0.6)
+        transition: transform 1s ease, opacity 1s ease
+    .slider__item.slick-center
+        opacity: 1
+        transform: scale(1)
+    .slick-arrow
+        position: absolute
+        top: 13%
+        z-index: 10
+        border: none
+        width: 15px
+        background: none
+        cursor: pointer
+    .slick-arrow img
+        width: 100%
+    .slick-prev
+        left: 44%
+    .slick-next
+        right: 44%
+    .slider__header
+        margin-top: 20px
+        font-size: 18px
+        font-weight: bold
+        line-height: 22px
+    .slider__subheader
+        text-align: center
+        margin-top: 10px
+        padding: 0 30px 0 30px
+        font-size: 16px
+

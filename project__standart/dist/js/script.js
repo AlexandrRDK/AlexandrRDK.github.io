@@ -1,46 +1,124 @@
-"use strict";
+/*
+window.addEventListener('DOMContentLoaded', () => {
+//   carousel({
+//     slide: '.carousel__item',
+//     nextArrow: '.carousel__next',
+//     prevArrow: '.carousel__prev',
+//     wrapper: '.carousel',
+//     field: '.carousel-inner'
+//   });
 
-let numberOfFilms;
+//   function carousel({slide, prevArrow, nextArrow, wrapper, field}) {
+//     let slideIndex = 1;
+//     let offset = 0;
 
-function start() {
-  numberOfFilms = + prompt('Сколько фильмов вы уже просмотрели?', '');
-  while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-    numberOfFilms = + prompt('Сколько фильмов вы уже просмотрели?', '');
-  }
+//     const slides = document.querySelectorAll(slide),
+//           prev = document.querySelector(prevArrow),
+//           next = document.querySelector(nextArrow),
+//           slidesWrapper = document.querySelector(wrapper),
+//           slidesField = document.querySelector(field),
+//           width = window.getComputedStyle(slidesWrapper).width;
+
+//     slidesField.style.width = 100 * slides.length + '%';
+//     slidesField.style.display = 'flex';
+//     slidesField.style.transition = '0.5s all';
+//     slidesWrapper.style.overflow = 'hidden';
+
+//     slides.forEach(slide => {
+//         slide.style.width = width;
+//     });
+
+//     next.addEventListener('click', () => {
+//         if (offset == (deleteNotDigits(width) * (slides.length -1))) {
+//             offset = 0;
+//         } else {
+//             offset += deleteNotDigits(width);
+//         }
+
+//         slidesField.style.transform = `translateX(-${offset}px)`;
+
+//         if (slideIndex == slides.length){
+//             slideIndex = 1;
+//         } else {
+//             slideIndex++;
+//         }
+//     });
+
+//     prev.addEventListener('click', () => {
+//         if (offset == 0) {
+//             offset = deleteNotDigits(width) * (slides.length -1);
+//         } else {
+//             offset -= deleteNotDigits(width);
+//         }
+//         slidesField.style.transform = `translateX(-${offset}px)`;
+
+//         if (slideIndex == 1){
+//             slideIndex = slides.length;
+//         } else {
+//             slideIndex--;
+//         }
+//     });
+
+//     function deleteNotDigits(str){
+//         return +str.replace(/\D/g, '');
+//     }
+// }
+
+
+
+
+const slides = document.querySelectorAll('.carousel__item'),
+      prev = document.querySelector('.carousel__prev'),
+      next = document.querySelector('.carousel__next');
+
+let slideIndex = 1;
+
+showSlides(slideIndex);
+
+
+function showSlides(n) {
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+      if(i === slideIndex - 1) {
+          slides[i].style.cssText=`
+          transform: translateY(0px);
+          opacity: 100%;
+        `;
+      } else {
+          slides[i].style.cssText=`
+            transform: translateY(70px);
+            opacity: 60%;
+          `;
+      }
+    }
 }
 
-start();
-
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false
-};
-
-for (let i = 0; i < 2; i++) {
-  const a = prompt('Один из последних просмотренных фильмов?', ''),
-        b = prompt('На сколько оцените его?','');
-
-  if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-    personalMovieDB.movies[a] = b;
-  } else {
-    i--;
-  }
+function plusSlide(n) {
+    showSlides(slideIndex += n);
 }
 
-if (personalMovieDB.count < 10) {
-  console.log("Просмотренно довольно мало фильмов");
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-  console.log("Вы классический зритель");
-} else if (personalMovieDB.count >= 30) {
-  console.log("Вы киноман!");
-} else {
-  console.log("Произошла ошибка!");
-}
+prev.addEventListener('click', () => {
+    plusSlide(-1);
+});
 
-console.log(personalMovieDB);
+next.addEventListener('click', () => {
+    plusSlide(1);
+});
+});
 
+*/
 
-
+$(document).ready(function() {
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+});

@@ -1,73 +1,124 @@
-"use strict";
+/*
+window.addEventListener('DOMContentLoaded', () => {
+//   carousel({
+//     slide: '.carousel__item',
+//     nextArrow: '.carousel__next',
+//     prevArrow: '.carousel__prev',
+//     wrapper: '.carousel',
+//     field: '.carousel-inner'
+//   });
 
-const personalMovieDB = {
-  count: 0,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false,
-  start: function() {
-    personalMovieDB.count = + prompt('Сколько фильмов вы уже просмотрели?', '');
-    while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
-      personalMovieDB.count = + prompt('Сколько фильмов вы уже просмотрели?', '');
+//   function carousel({slide, prevArrow, nextArrow, wrapper, field}) {
+//     let slideIndex = 1;
+//     let offset = 0;
+
+//     const slides = document.querySelectorAll(slide),
+//           prev = document.querySelector(prevArrow),
+//           next = document.querySelector(nextArrow),
+//           slidesWrapper = document.querySelector(wrapper),
+//           slidesField = document.querySelector(field),
+//           width = window.getComputedStyle(slidesWrapper).width;
+
+//     slidesField.style.width = 100 * slides.length + '%';
+//     slidesField.style.display = 'flex';
+//     slidesField.style.transition = '0.5s all';
+//     slidesWrapper.style.overflow = 'hidden';
+
+//     slides.forEach(slide => {
+//         slide.style.width = width;
+//     });
+
+//     next.addEventListener('click', () => {
+//         if (offset == (deleteNotDigits(width) * (slides.length -1))) {
+//             offset = 0;
+//         } else {
+//             offset += deleteNotDigits(width);
+//         }
+
+//         slidesField.style.transform = `translateX(-${offset}px)`;
+
+//         if (slideIndex == slides.length){
+//             slideIndex = 1;
+//         } else {
+//             slideIndex++;
+//         }
+//     });
+
+//     prev.addEventListener('click', () => {
+//         if (offset == 0) {
+//             offset = deleteNotDigits(width) * (slides.length -1);
+//         } else {
+//             offset -= deleteNotDigits(width);
+//         }
+//         slidesField.style.transform = `translateX(-${offset}px)`;
+
+//         if (slideIndex == 1){
+//             slideIndex = slides.length;
+//         } else {
+//             slideIndex--;
+//         }
+//     });
+
+//     function deleteNotDigits(str){
+//         return +str.replace(/\D/g, '');
+//     }
+// }
+
+
+
+
+const slides = document.querySelectorAll('.carousel__item'),
+      prev = document.querySelector('.carousel__prev'),
+      next = document.querySelector('.carousel__next');
+
+let slideIndex = 1;
+
+showSlides(slideIndex);
+
+
+function showSlides(n) {
+    if (n > slides.length) {
+        slideIndex = 1;
     }
-  },
-  rememberMyFilms: function() {
-    for (let i = 0; i < 2; i++) {
-      const a = prompt('Один из последних просмотренных фильмов?', '').trim(),
-            b = prompt('На сколько оцените его?','');
 
-      if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+      if(i === slideIndex - 1) {
+          slides[i].style.cssText=`
+          transform: translateY(0px);
+          opacity: 100%;
+        `;
       } else {
-        i--;
+          slides[i].style.cssText=`
+            transform: translateY(70px);
+            opacity: 60%;
+          `;
       }
     }
-  },
-  detectPersonalLevel: function() {
-    if (personalMovieDB.count < 10) {
-      console.log("Просмотренно довольно мало фильмов");
-    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-      console.log("Вы классический зритель");
-    } else if (personalMovieDB.count >= 30) {
-      console.log("Вы киноман!");
-    } else {
-      console.log("Произошла ошибка!");
-    }
-  },
-  showMyDB: function(hidden) {
-    if (!hidden) {
-      console.log(personalMovieDB);
-    }
-  },
-  toggleVisibleMyDB: function() {
-    if (personalMovieDB.privat) {
-      personalMovieDB.privat = false;
-    } else {
-      personalMovieDB.privat = true;
-    }
-  },
-  writeYourGenres: function () {
-    for (let i = 1; i <= 3; i++) {
-      let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+}
 
-      if (genre ==='' || genre == null) {
-        console.log('Вы ввели некоректные данные');
-      } else {
-        personalMovieDB.genres[i - 1] = genre;
-      }
-    }
+function plusSlide(n) {
+    showSlides(slideIndex += n);
+}
 
-    personalMovieDB.genres.forEach((item, i,) => {
-      console.log(`Любимый жанр ${i + 1} - это ${item}`);
-    });
-  }
-};
+prev.addEventListener('click', () => {
+    plusSlide(-1);
+});
 
-let didjei = function() {
-  for (let i = 1; i = 16; i++){
-    console.log(i);
-  }
-};
+next.addEventListener('click', () => {
+    plusSlide(1);
+});
+});
 
+*/
 
+$(document).ready(function() {
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+});
